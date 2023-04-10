@@ -9,13 +9,25 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        appBar: _CustomAppBar(
+        appBar: const _CustomAppBar(
           title: 'Hello world',
         ),
-        body: Center(
+        body: const Center(
           child: Text('Hello World!'),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.deepPurple.shade800,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.favorite_outline), label: 'Favorites'),
+            BottomNavigationBarItem(icon: Icon(Icons.play_circle_outlined), label: 'Play'),
+            BottomNavigationBarItem(icon: Icon(Icons.people_outline), label: 'Profile'),
+          ],
         ),
       ),
     );
