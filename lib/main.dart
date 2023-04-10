@@ -21,7 +21,6 @@ class MainApp extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.deepPurple.shade800,
           selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.favorite_outline), label: 'Favorites'),
